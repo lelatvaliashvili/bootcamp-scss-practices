@@ -1,4 +1,305 @@
+<<<<<<< HEAD
 @import 'reset';
 @import 'base';
 @import 'palette';
 @import 'components/notification/index.scss'
+=======
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 50px;
+    padding-left: 50px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+$color-1: #A47503;
+$color-2: #FFC12D;
+$color-3: #F9B718;
+$color-4: #C89210;
+$color-5: #B18009;
+$color-6: #558502;
+$color-7: #97E411;
+$color-8: #7BC200;
+$color-9: #A7EC2F;
+$color-10: #D52E13;
+$color-11: #FD7761;
+$color-12: #F55C43;
+$color-13: #FEB1A4;
+$color-14: #0787D4;
+$color-15: #6FD9FC;
+$color-16: #47B4F6;
+$color-17: #85EBFA;
+$color-18: #5B568E;
+$color-19: #A39CDC;
+$color-20: #8781BD;
+$color-21: #AACDF6;
+$color-22: #E2E6E7;
+$color-23: #2C3E50;
+$color-24: #A1B1BC;
+$color-25: #CFD2D3;
+$color-26: #A2A4A5;
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    width: 570px;
+
+    &.col-2 {
+        width: 1140px;
+    }
+
+    section {
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+section {
+    position: relative;
+    display: flex;
+    border: 1px solid $color-22;
+    border-radius: 10px;
+    padding-right: 90px;
+    padding-left: 49px;
+    &::before {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        height: 50px;
+        width: 50px;
+        margin: 42px 28px 42px 0;
+        font-family: 'FontAwesome';
+        font-size: 24px;
+        border: 7px solid transparent;
+        border-radius: 50%;
+    }
+
+    &.warning {
+        
+        &::before {
+            content: '\f12a';
+            color: $color-1;
+            background-color: $color-2;
+            border-color: $color-3;
+        }
+
+        &.solid::before {
+            border-color: $color-4;
+        }
+    }
+
+    &.checked {
+
+        &::before {
+            content: '\f00c';
+            color: $color-6;
+            background-color: $color-7;
+            border-color: $color-8;
+        }
+    }
+
+    &.error {
+
+        &::before {
+            content: '\f00d';
+            color: $color-10;
+            background-color: $color-11;
+            border-color: $color-12;
+        }
+    }
+
+    &.danger {
+        
+        &::before {
+            content: '\f0e7';
+            color: $color-14;
+            background-color: $color-15;
+            border-color: $color-16;
+        }
+    }
+
+    &.info {
+        padding-right: 50px;
+
+        &::before {
+            content: '\f129';
+            color: $color-18;
+            background-color: $color-19;
+            border-color: $color-20;
+        }
+    }
+
+
+    div {
+        margin-top: 35px;
+
+        h1 {
+            color: $color-23;
+            font-family: 'Lato';
+            font-size: 14px;
+            font-weight: 900;
+            line-height: 24px;
+            letter-spacing: 1.3px;
+            word-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
+        p {
+            color: $color-24;
+            font-size: 14px;
+            font-weight: normal;
+            font-family: 'Lato';
+            line-height: 24px;
+        }
+    }
+    
+    a {
+        position: absolute;
+        top: 16.9px;
+        right: 18px;
+        font-size: 14px;
+        color: $color-25;
+
+        &:hover {
+            color: $color-26;
+        }
+
+        &::before {
+            content: '\f00d';
+            font-family: 'FontAwesome';
+            display: inline-block;
+        }
+    }
+
+    &.solid {
+        
+        p {
+            color: $color-23;
+        }
+
+        &.warning {
+            background-color: $color-2;
+            border-color: transparent;
+
+            &::before {
+                color: $color-1;
+                background-color: $color-2;
+            }
+    
+            &.solid::before {
+                border-color: $color-4;
+            }
+
+            a {
+                color: $color-5;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
+        }
+
+        &.checked {
+            background-color: $color-9;
+            border-color: transparent;
+
+            &::before {
+                color: $color-6;
+                background-color: $color-7;
+            }
+    
+            &.solid::before {
+                border-color: $color-8;
+            }
+
+            a {
+                color: $color-6;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
+        }
+
+        &.error {
+            background-color: $color-13;
+            border-color: transparent;
+
+            &::before {
+                color: $color-10;
+                background-color: $color-13;
+            }
+    
+            &.solid::before {
+                border-color: $color-12;
+            }
+
+            a {
+                color: $color-10;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
+        }
+
+        &.danger {
+            background-color: $color-17;
+            border-color: transparent;
+
+            &::before {
+                color: $color-14;
+                background-color: $color-17;
+            }
+    
+            &.solid::before {
+                border-color: $color-16;
+            }
+
+            a {
+                color: $color-14;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
+        }
+
+        &.info {
+            background-color: $color-21;
+            border-color: transparent;
+
+            &::before {
+                color: $color-18;
+                background-color: $color-21;
+            }
+    
+            &.solid::before {
+                border-color: $color-20;
+            }
+
+            a {
+                color: $color-18;
+
+                &:hover {
+                    color: $color-23;
+                }
+            }
+        }
+    }
+}
+>>>>>>> 06c70f8fdde3e4800fb3cae84235c6e08ec10b8e
